@@ -1,4 +1,4 @@
-package net.xdclass.online_xdclass.domain;
+package net.xdclass.online_xdclass.model.entity;
 
 import java.util.Date;
 
@@ -10,6 +10,15 @@ public class User {
     private String headshot;
     private String phone;
     private Date creationTime;
+
+    public User() {
+    }
+
+    public User(String name, String phone, Date creationTime) {
+        this.name = name;
+        this.phone = phone;
+        this.creationTime = creationTime;
+    }
 
     @Override
     public String toString() {
