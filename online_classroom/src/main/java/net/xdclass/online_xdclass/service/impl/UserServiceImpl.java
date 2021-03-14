@@ -38,8 +38,19 @@ public class UserServiceImpl implements UserService {
         if (null == user) {
             return null;
         } else {
-            return JwtUtils.genJsonWebToken(user);
+            return JwtUtils.generateToken(user);
         }
+    }
+
+    @Override
+    public User getUserInfoById(Integer userId) {
+
+        User user = userMapper.getUserInfoById(userId);
+        // Password should not be returned to front-end for safety
+        // Instead, use @JsonIgnore annotation on the pwd property of User
+        //user.setPwd("");
+
+        return user;
     }
 
     private User parseToUser(Map<String, String> userInfo) {

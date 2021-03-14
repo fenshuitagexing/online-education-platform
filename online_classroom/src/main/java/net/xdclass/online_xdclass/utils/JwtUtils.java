@@ -14,7 +14,7 @@ public class JwtUtils {
     private static final String TOKEN_PREFIX = "ABC";
     private static final String SUBJECT = "SSM Development";
 
-    public static String genJsonWebToken(User user) {
+    public static String generateToken(User user) {
 
         String token = Jwts.builder().setSubject(SUBJECT)
                     .claim("headshot", user.getHeadshot())
@@ -29,7 +29,7 @@ public class JwtUtils {
         return token;
     }
 
-    public static Claims checkJwt(String token) {
+    public static Claims verifyToken(String token) {
 
         try {
             final Claims claims = Jwts.parser().setSigningKey(SECRET_KEY)

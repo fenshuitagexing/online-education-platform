@@ -18,10 +18,10 @@ class OnlineXdclassApplicationTests {
 		user.setName("Robot A");
 		user.setHeadshot("png");
 
-		String token = JwtUtils.genJsonWebToken(user);
+		String token = JwtUtils.generateToken(user);
 		System.out.println(token);
 
-		Claims claims = JwtUtils.checkJwt(token);
+		Claims claims = JwtUtils.verifyToken(token);
 		System.out.println(claims.get("name"));
 	}
 
