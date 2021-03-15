@@ -16,7 +16,7 @@ public class CustomExceptionHandler {
     @ResponseBody
     public JsonData handle(Exception e) {
 
-        logger.error("[ Exception ] {}", e);
+        logger.error("[ Exception ] {}", e.getMessage());
 
         if (e instanceof CustomException) {
             CustomException customException = (CustomException) e;

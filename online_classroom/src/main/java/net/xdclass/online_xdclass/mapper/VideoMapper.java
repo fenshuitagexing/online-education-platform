@@ -15,4 +15,6 @@ public interface VideoMapper {
     List<VideoBanner> getHomePageVideoBanner();
 
     Video getVideoDetailsById(@Param("video_id") int videoId);
+
+    Video getById(@Param("video_id") int videoId);
 }

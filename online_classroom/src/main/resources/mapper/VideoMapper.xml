@@ -6,6 +6,10 @@
         SELECT * FROM video;
     </select>
 
+    <select id="getById" resultType="Video">
+        SELECT * FROM video WHERE id = #{video_id};
+    </select>
+
     <select id="getHomePageVideoBanner" resultType="VideoBanner">
         SELECT * FROM video_banner ORDER BY weight ASC;
     </select>
