@@ -1,17 +1,27 @@
 package net.xdclass.online_xdclass.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.Date;
 import java.util.List;
 
 public class Chapter {
 
     private Integer id;
+
+    @JsonProperty("video_id")
     private Integer videoId;
+
     private String title;
     private Integer order;
+
+    @JsonProperty("creation_time")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Date creationTime;
 
     // not a field of the chapter table
+    @JsonProperty("episode_list")
     private List<Episode> episodeList;
 
     @Override

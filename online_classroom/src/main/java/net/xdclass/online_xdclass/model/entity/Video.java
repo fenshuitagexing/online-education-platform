@@ -1,5 +1,8 @@
 package net.xdclass.online_xdclass.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.Date;
 import java.util.List;
 
@@ -9,12 +12,20 @@ public class Video {
     private Integer id;
     private String title;
     private String summary;
+
+    @JsonProperty("cover_img")
     private String coverImg;
+
     private Integer price;
+
+    @JsonProperty("creation_time")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Date creationTime;
+
     private Double rating;
 
     // not a field of the video table
+    @JsonProperty("chapter_list")
     private List<Chapter> chapterList;
 
     @Override

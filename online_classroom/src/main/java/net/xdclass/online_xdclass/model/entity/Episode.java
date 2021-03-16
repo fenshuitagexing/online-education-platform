@@ -1,17 +1,35 @@
 package net.xdclass.online_xdclass.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.Date;
 
 public class Episode {
 
     private Integer id;
+
+    @JsonProperty("chapter_id")
     private Integer chapterId;
+
     private String title;
+
+    @JsonProperty("global_order")
     private Integer globalOrder;
+
+    @JsonProperty("chapter_order")
     private Integer chapterOrder;
+
+    @JsonProperty("play_url")
     private String playUrl;
+
     private Integer free;
+
+    @JsonProperty("video_id")
     private Integer videoId;
+
+    @JsonProperty("creation_time")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Date creationTime;
 
     @Override

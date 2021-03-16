@@ -1,6 +1,9 @@
 package net.xdclass.online_xdclass.model.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.Date;
 
 public class VideoBanner {
@@ -8,7 +11,11 @@ public class VideoBanner {
     private Integer id;
     private String url;
     private String img;
+
+    @JsonProperty("creation_time")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Date creationTime;
+
     private Integer weight;
 
     @Override
