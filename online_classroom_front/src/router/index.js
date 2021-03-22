@@ -18,38 +18,38 @@ const routes = [
   },
 
   {
-    path : "/CourseDetail",
+    path : "/course_detail",
     name : "CourseDetail",
     component : CourseDetail
   },
 
   {
-    path : "/Order",
+    path : "/order",
     name : "Order",
     component : () => import("../views/Order/Order.vue")
     // component : Order
   },
 
   {
-    path : "/Payment",
+    path : "/payment",
     name : "Payment",
     component : Payment
   },
 
   {
-    path : "/Personal",
+    path : "/personal",
     name : "Personal",
     component : Personal
   },
 
   {
-    path : "/SignIn",
+    path : "/sign_in",
     name : "SignIn",
     component : SignIn
   },
   
   {
-    path : "/SignUp",
+    path : "/sign_up",
     name : "SignUp",
     component : SignUp
   }

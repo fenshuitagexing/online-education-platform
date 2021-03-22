@@ -17,7 +17,7 @@ export const getBanner = () => axios.get("/api/v1/pub/video/video_banner")
 
 export const getVideoList = () => axios.get("/api/v1/pub/video/video_list")
 
-export const getVideoDetails = (videoId) => axios.get("/api/v1/pub/video/video_details", {
+export const getVideoDetails = (videoId) => axios.get("/api/v1/pub/video/video_details?", {
     params : {
         video_id : videoId
     }

@@ -64,7 +64,10 @@ public class VideoServiceImpl implements VideoService {
 
         String cacheKey = String.format(CacheKeyManager.VIDEO_DETAILS, videoId);
         try {
-            Object cacheObj = basicCache.getOneHourCache().get(cacheKey, videoMapper::getVideoList);
+            Object cacheObj = basicCache.getOneHourCache().get(cacheKey, () -> {
+                Video video = videoMapper.getVideoDetailsById(videoId);
+                return video;
+            });
             if (cacheObj instanceof Video) {
                 Video video = (Video) cacheObj;
                 return video;
