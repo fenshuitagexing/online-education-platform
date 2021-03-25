@@ -26,20 +26,25 @@ const routes = [
   {
     path : "/order",
     name : "Order",
-    component : () => import("../views/Order/Order.vue")
-    // component : Order
+    // component : () => import("../views/Order/Order.vue"),
+    component : Order,
+
+    // Intercepting the route in main.js
+    meta : {requiresAuth : true}
   },
 
   {
     path : "/payment",
     name : "Payment",
-    component : Payment
+    component : Payment,
+    meta : {requiresAuth : true}
   },
 
   {
     path : "/personal",
     name : "Personal",
-    component : Personal
+    component : Personal,
+    meta : {requiresAuth : true}
   },
 
   {

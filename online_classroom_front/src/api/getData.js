@@ -31,7 +31,7 @@ export const saveOrder = (token, videoId) => axios.post("/api/v1/pri/order/save"
     }
 })
 
-export const getOrderList = (token) => axios.post("/api/v1/pri/order/order_list", {
+export const getOrderList = (token) => axios.get("/api/v1/pri/order/order_list", {
     params : {
         "token" : token
     }

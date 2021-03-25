@@ -16,7 +16,7 @@
 export default {
     props:{
         chapterList:{
-            type:Object,
+            type:Array,
             required:true
         }
     }
