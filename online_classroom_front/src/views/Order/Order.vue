@@ -20,7 +20,7 @@
         </div>
 
         <div class="no_order" v-else>
-            <p>暂未购买课程 </p>
+            <p>No purchases found in your history</p>
         </div>
 
         <common-footer></common-footer>

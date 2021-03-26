@@ -63,7 +63,7 @@ export default {
   bottom: 0;
   z-index: 999;
   background-color: #fff;
-  width: 100%;
+  width: 50%;
   border-top: 1px solid rgba($color: #000000, $alpha: 0.1);
 }
 .cube-tab_active {

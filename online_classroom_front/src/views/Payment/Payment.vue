@@ -46,7 +46,7 @@ export default {
                 const result = await saveOrder(this.$store.state.token, this.$route.query.video_id);
                 if (result.data.code == 0) {
                     const toast = this.$createToast({
-                    txt: "Purchase successfully",
+                    txt: "Purchased successfully",
                     type: "correct",
                     time: 2000,
                     onTimeout : () => {
@@ -115,7 +115,7 @@ export default {
 .footer {
   position: fixed;
   bottom: 0;
-  width: 100%;
+  width: 50%;
   height: 50px;
   background-color: #fff;
   display: flex;

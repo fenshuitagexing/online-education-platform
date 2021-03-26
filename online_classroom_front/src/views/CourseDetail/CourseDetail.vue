@@ -77,7 +77,7 @@ footer {
   // fixed固定在底部
   position: fixed;
   bottom: 0;
-  width: 100%;
+  width: 50%;
   padding: 8px 0;
   background-color: #fff;
   z-index: 999;
