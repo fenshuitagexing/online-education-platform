@@ -47,7 +47,7 @@ The syllabus of each course is listed in the details page.
 
 
 
-![](https://github.com/fenshuitagexing/online-education-platform/blob/main/pages/sign_in.png)
+![](https://github.com/fenshuitagexing/online-education-platform/blob/main/pages/sign_in.png?raw=true)
 
 
 
